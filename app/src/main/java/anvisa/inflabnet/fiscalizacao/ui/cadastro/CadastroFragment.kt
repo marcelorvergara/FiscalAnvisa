@@ -146,7 +146,7 @@ class CadastroFragment : Fragment() {
         ApiClientBairros.getBairrosService().all().enqueue(object : Callback<Bairros> {
             override fun onFailure(call: Call<Bairros>, t: Throwable) {
                 Toast.makeText(requireContext(), t.message, Toast.LENGTH_LONG).show()
-                Log.i("Bairros t", t.message)
+
             }
 
             override fun onResponse(call: Call<Bairros>, response: Response<Bairros>) {
@@ -173,7 +173,7 @@ class CadastroFragment : Fragment() {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
                     acBairros.setOnDismissListener {
                     }
-                    acBairros.onFocusChangeListener = View.OnFocusChangeListener { view, b ->
+                    acBairros.onFocusChangeListener = View.OnFocusChangeListener { _, b ->
                         if (b) {
                             // Sugestões dropdown
                             acBairros.showDropDown()
@@ -216,7 +216,7 @@ class CadastroFragment : Fragment() {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
                         acMunicipios.setOnDismissListener {
                         }
-                        acMunicipios.onFocusChangeListener = View.OnFocusChangeListener { view, b ->
+                        acMunicipios.onFocusChangeListener = View.OnFocusChangeListener { _, b ->
                             if (b) {
                                 // Sugestões dropdown
                                 acMunicipios.showDropDown()

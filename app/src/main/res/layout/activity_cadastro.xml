@@ -16,10 +16,11 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="Insira seu email"
+        android:hint="@string/insira_seu_email"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/edtPassCad"
@@ -29,10 +30,11 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="Crie um password"
+        android:hint="@string/crie_um_password"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUserCad" />
+        app:layout_constraintTop_toBottomOf="@+id/edtUserCad"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/cadastroBtnCad"
@@ -40,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:text="Cadastrar"
+        android:text="@string/cadastrar"
         app:layout_constraintBaseline_toBaselineOf="@+id/edtPassCadConf"
         app:layout_constraintStart_toEndOf="@+id/edtPassCadConf" />
 
@@ -52,7 +54,7 @@
         android:layout_marginLeft="26dp"
         android:layout_marginTop="18dp"
         android:fontFamily="sans-serif-black"
-        android:text="Cadastro de Usuário"
+        android:text="@string/cadastro_de_usu_rio"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,9 +68,10 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="Confirme o passowrd"
+        android:hint="@string/confirme_o_passowrd"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPassCad" />
+        app:layout_constraintTop_toBottomOf="@+id/edtPassCad"
+        android:autofillHints="" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

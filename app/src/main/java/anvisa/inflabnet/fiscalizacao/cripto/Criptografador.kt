@@ -18,7 +18,7 @@ class Criptografador {
 
     @RequiresApi(Build.VERSION_CODES.M)
     fun getSecretKey(): SecretKey? {
-        var chave: SecretKey? = null
+        var chave: SecretKey?
         if(ks.containsAlias("chaveCripto")) {
             val entrada = ks.getEntry("chaveCripto", null) as?
                     KeyStore.SecretKeyEntry

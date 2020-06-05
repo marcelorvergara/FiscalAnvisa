@@ -7,4 +7,44 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="insira_seu_email">Insira seu email</string>
+    <string name="crie_um_password">Crie um password</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="cadastro_de_usu_rio">Cadastro de Usuário</string>
+    <string name="confirme_o_passowrd">Confirme o passowrd</string>
+    <string name="password">password</string>
+    <string name="login">Login</string>
+    <string name="programa_fiscaliza_padr_o">Programa Fiscaliza Padrão</string>
+    <string name="divis_o_de_alimentos">Divisão de Alimentos</string>
+    <string name="app_para_fins_acad_micos">App para fins acadêmicos</string>
+    <string name="estabelecimento">Estabelecimento</string>
+    <string name="bairro">Bairro</string>
+    <string name="cadastro_novo_estabelecimento">Cadastro Novo Estabelecimento</string>
+    <string name="digite_o_munic_pio_do_estabelecimento">Digite o município do estabelecimento</string>
+    <string name="digite_o_bairro_do_estabelecimento">Digite o bairro do estabelecimento</string>
+    <string name="pr_ximo">Próximo</string>
+    <string name="nome_do_estabelecimento">Nome do Estabelecimento</string>
+    <string name="logout">Logout</string>
+    <string name="voltar">Voltar</string>
+    <string name="question_rio">Questionário:</string>
+    <string name="q1">1 -O estabelecimento possui todos os alvarás para funcionamento?</string>
+    <string name="sim">Sim</string>
+    <string name="n_o">Não</string>
+    <string name="q2">2 - Manipulação e preparo dos alimentos de acordo com as normas?</string>
+    <string name="q3">3 - Acondicionamento e armazenamento de acordo com as normas?</string>
+    <string name="q4">4 - Transporte e exposição à venda de acordo com as normas?</string>
+    <string name="q5">5 - Possui banheiros limpos para funcionários e clientes?</string>
+    <string name="q6">6 - Os alimentos estocados possuiem rotulagem de acordo com as normas?</string>
+    <string name="gravar">Gravar</string>
+    <string name="resposta1">Resposta1</string>
+    <string name="resposta2">Resposta2</string>
+    <string name="resposta3">Resposta3</string>
+    <string name="resposta4">Resposta4</string>
+    <string name="resposta5">Resposta5</string>
+    <string name="resposta6">Resposta6</string>
+    <string name="resumo_estabelecimentos">Resumo Estabelecimentos</string>
+    <string name="selecione_o_bairro_que_deseja_extrair_um_resumo_geral">Selecione o bairro que deseja extrair um resumo geral:</string>
+    <string name="lista_de_bairros">Lista de Bairros</string>
+    <string name="total_de_avalia_es">Total de Avaliações:</string>
+    <string name="result_tot">Result Tot</string>
 </resources>

@@ -24,9 +24,7 @@ import anvisa.inflabnet.fiscalizacao.database.service.AppDatabaseService
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_perguntas.*
 
-/**
- * A simple [Fragment] subclass.
- */
+
 class PerguntasFragment : Fragment() {
 
     private lateinit var appDatabase : AppDatabase
@@ -187,7 +185,7 @@ class PerguntasFragment : Fragment() {
                     rb3 = resiltado3,
                     rb4 = resiltado4,
                     rb5 = resiltado5,
-                    rb6 = resiltado5
+                    rb6 = resiltado6
                 )
 
                 //gravar no banco

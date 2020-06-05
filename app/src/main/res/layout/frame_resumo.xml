@@ -14,8 +14,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="2dp"
         android:fontFamily="sans-serif-black"
+        android:text="@string/bairro"
         android:textSize="18sp"
-        android:text="Bairro:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,8 +26,8 @@
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
         android:fontFamily="sans-serif-black"
+        android:text="@string/bairro"
         android:textSize="18sp"
-        android:text="Bairro"
         app:layout_constraintBaseline_toBaselineOf="@+id/txtBairro"
         app:layout_constraintStart_toEndOf="@+id/txtBairro" />
 
@@ -39,7 +39,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-black"
-        android:text="Total de Avaliações:"
+        android:text="@string/total_de_avalia_es"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtBairro" />
@@ -52,7 +52,7 @@
         android:layout_marginLeft="4dp"
         android:fontFamily="sans-serif-black"
         android:textSize="18sp"
-        android:text="Result Tot"
+        android:text="@string/result_tot"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
         app:layout_constraintStart_toEndOf="@+id/textView5" />
 
@@ -65,7 +65,7 @@
 
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="1 -O estabelecimento possui todos os alvarás para funcionamento?"
+        android:text="@string/q1"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,7 +79,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="2 - Manipulação e preparo dos alimentos de acordo com as normas?"
+        android:text="@string/q2"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,7 +93,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="3 - Acondicionamento e armazenamento de acordo com as normas?"
+        android:text="@string/q3"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,7 +107,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="4 - Transporte e exposição à venda de acordo com as normas?"
+        android:text="@string/q4"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -121,7 +121,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="5 - Possui banheiros limpos para funcionários e clientes?"
+        android:text="@string/q5"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -135,7 +135,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="6 - Os alimentos estocados possuiem rotulagem de acordo com as normas?"
+        android:text="@string/q6"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -148,7 +148,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="2dp"
-        android:text="Resposta1"
+        android:text="@string/resposta1"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPergunta1" />
@@ -160,7 +160,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="2dp"
-        android:text="Resposta2"
+        android:text="@string/resposta2"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPergunta2" />
@@ -172,7 +172,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="2dp"
-        android:text="Resposta3"
+        android:text="@string/resposta3"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPergunta3" />
@@ -184,7 +184,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="2dp"
-        android:text="Resposta4"
+        android:text="@string/resposta4"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPergunta4" />
@@ -196,7 +196,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="2dp"
-        android:text="Resposta5"
+        android:text="@string/resposta5"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPergunta5" />
@@ -208,7 +208,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="2dp"
-        android:text="Resposta6"
+        android:text="@string/resposta6"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPergunta6" />
@@ -220,7 +220,7 @@
         android:layout_marginTop="2dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:text="Voltar"
+        android:text="@string/voltar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtResposta6" />
 

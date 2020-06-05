@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="28dp"
         android:layout_marginRight="28dp"
-        android:text="Voltar"
+        android:text="@string/voltar"
         app:layout_constraintEnd_toStartOf="@+id/btnGravar"
         app:layout_constraintTop_toBottomOf="@+id/rgPergunta6" />
 
@@ -26,7 +26,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="2dp"
         android:fontFamily="sans-serif-black"
-        android:text="Questionário:"
+        android:text="@string/question_rio"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,7 +40,7 @@
         android:layout_marginTop="8dp"
 
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="1 -O estabelecimento possui todos os alvarás para funcionamento?"
+        android:text="@string/q1"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
-            android:text="Sim"
+            android:text="@string/sim"
             android:textSize="15sp" />
 
         <RadioButton
@@ -70,8 +70,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
             android:fontFamily="monospace"
-            android:text="Não"
-            android:textSize="15sp" />
+            android:text="@string/n_o"
+            android:textSize="15sp"
+            android:layout_marginStart="70dp" />
     </RadioGroup>
 
     <TextView
@@ -82,7 +83,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="4dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="2 - Manipulação e preparo dos alimentos de acordo com as normas?"
+        android:text="@string/q2"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
-            android:text="Sim"
+            android:text="@string/sim"
             android:textSize="15sp" />
 
         <RadioButton
@@ -112,8 +113,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
             android:fontFamily="monospace"
-            android:text="Não"
-            android:textSize="15sp" />
+            android:text="@string/n_o"
+            android:textSize="15sp"
+            android:layout_marginStart="70dp" />
     </RadioGroup>
 
     <TextView
@@ -124,7 +126,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="4dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="3 - Acondicionamento e armazenamento de acordo com as normas?"
+        android:text="@string/q3"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -145,7 +147,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
-            android:text="Sim"
+            android:text="@string/sim"
             android:textSize="15sp" />
 
         <RadioButton
@@ -154,8 +156,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
             android:fontFamily="monospace"
-            android:text="Não"
-            android:textSize="15sp" />
+            android:text="@string/n_o"
+            android:textSize="15sp"
+            android:layout_marginStart="70dp" />
     </RadioGroup>
 
     <TextView
@@ -166,7 +169,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="4dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="4 - Transporte e exposição à venda de acordo com as normas?"
+        android:text="@string/q4"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -187,7 +190,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
-            android:text="Sim"
+            android:text="@string/sim"
             android:textSize="15sp" />
 
         <RadioButton
@@ -196,8 +199,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
             android:fontFamily="monospace"
-            android:text="Não"
-            android:textSize="15sp" />
+            android:text="@string/n_o"
+            android:textSize="15sp"
+            android:layout_marginStart="70dp" />
     </RadioGroup>
 
     <TextView
@@ -208,7 +212,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="4dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="5 - Possui banheiros limpos para funcionários e clientes?"
+        android:text="@string/q5"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -229,7 +233,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
-            android:text="Sim"
+            android:text="@string/sim"
             android:textSize="15sp" />
 
         <RadioButton
@@ -238,8 +242,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
             android:fontFamily="monospace"
-            android:text="Não"
-            android:textSize="15sp" />
+            android:text="@string/n_o"
+            android:textSize="15sp"
+            android:layout_marginStart="70dp" />
     </RadioGroup>
 
     <TextView
@@ -250,7 +255,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="4dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="6 - Os alimentos estocados possuiem rotulagem de acordo com as normas?"
+        android:text="@string/q6"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -271,7 +276,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
-            android:text="Sim"
+            android:text="@string/sim"
             android:textSize="15sp" />
 
         <RadioButton
@@ -280,8 +285,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
             android:fontFamily="monospace"
-            android:text="Não"
-            android:textSize="15sp" />
+            android:text="@string/n_o"
+            android:textSize="15sp"
+            android:layout_marginStart="70dp" />
     </RadioGroup>
 
     <Button
@@ -290,7 +296,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:text="Gravar"
+        android:text="@string/gravar"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnVoltarPerguntas"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -298,10 +304,11 @@
         android:id="@+id/txtBairro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:text="Estabelecimento"
-        android:textSize="18sp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/estabelecimento"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
         app:layout_constraintStart_toEndOf="@+id/textView4" />
