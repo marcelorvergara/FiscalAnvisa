@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
-        if(!edtUser.text.toString().isBlank() || passEdt.text.toString().isBlank()) {
+        if(!edtUser.text.toString().isBlank() && !passEdt.text.toString().isBlank()) {
             mAuth!!.signInWithEmailAndPassword(edtUser.text.toString(), passEdt.text.toString())
                 .addOnSuccessListener {
                     if (it != null) {

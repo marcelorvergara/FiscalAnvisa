@@ -45,7 +45,7 @@ class CadastroActivity : AppCompatActivity() {
                 .addOnSuccessListener {
                     if(it != null){
                         val user = it.user!!.email
-                        showSnackbar(user)
+                        Toast.makeText(this,"Usuário ${user} cadastrado com sucesso!",Toast.LENGTH_SHORT).show()
                         clearFields()
                         val novoIntt = Intent(this, MainActivity::class.java)
                         novoIntt.putExtra("userLogin", userLogin)
@@ -64,6 +64,6 @@ class CadastroActivity : AppCompatActivity() {
     }
 
     private fun showSnackbar(msg: String?) {
-        Toast.makeText(this,"Login ${msg} criado com sucesso!",Toast.LENGTH_SHORT).show()
+        msg?.let { Snackbar.make(rooCadastro, it, Snackbar.LENGTH_LONG) }?.show()
     }
 }
