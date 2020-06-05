@@ -44,7 +44,9 @@
         android:layout_marginLeft="16dp"
         android:text="@string/cadastrar"
         app:layout_constraintBaseline_toBaselineOf="@+id/edtPassCadConf"
-        app:layout_constraintStart_toEndOf="@+id/edtPassCadConf" />
+        app:layout_constraintStart_toEndOf="@+id/edtPassCadConf"
+        android:textColor="@color/design_default_color_on_primary"
+        android:background="@drawable/btn_rounded"/>
 
     <TextView
         android:id="@+id/textView"

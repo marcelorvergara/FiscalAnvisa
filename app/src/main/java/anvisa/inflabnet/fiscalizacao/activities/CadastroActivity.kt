@@ -6,10 +6,12 @@ import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 import anvisa.inflabnet.fiscalizacao.R
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_cadastro.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 class CadastroActivity : AppCompatActivity() {
 
@@ -62,9 +64,6 @@ class CadastroActivity : AppCompatActivity() {
     }
 
     private fun showSnackbar(msg: String?) {
-        val snack = msg?.let { Snackbar.make(rooCadastro, it, Snackbar.LENGTH_LONG) }
-        if (snack != null) {
-            snack.show()
-        }
+        Toast.makeText(this,"Login ${msg} criado com sucesso!",Toast.LENGTH_SHORT).show()
     }
 }

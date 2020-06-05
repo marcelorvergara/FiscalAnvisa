@@ -16,7 +16,9 @@
         android:layout_marginRight="28dp"
         android:text="@string/voltar"
         app:layout_constraintEnd_toStartOf="@+id/btnGravar"
-        app:layout_constraintTop_toBottomOf="@+id/rgPergunta6" />
+        app:layout_constraintTop_toBottomOf="@+id/rgPergunta6"
+        android:textColor="@color/design_default_color_on_primary"
+        android:background="@drawable/btn_rounded"/>
 
     <TextView
         android:id="@+id/textView4"
@@ -298,7 +300,9 @@
         android:layout_marginRight="20dp"
         android:text="@string/gravar"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnVoltarPerguntas"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/design_default_color_on_primary"
+        android:background="@drawable/btn_rounded"/>
 
     <TextView
         android:id="@+id/txtBairro"

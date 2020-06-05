@@ -48,7 +48,9 @@
         android:layout_marginTop="24dp"
         android:text="@string/pr_ximo"
         app:layout_constraintEnd_toEndOf="@+id/edtEstabelecimento"
-        app:layout_constraintTop_toBottomOf="@+id/edtEstabelecimento" />
+        app:layout_constraintTop_toBottomOf="@+id/edtEstabelecimento"
+        android:textColor="@color/design_default_color_on_primary"
+        android:background="@drawable/btn_rounded"/>
 
     <EditText
         android:id="@+id/edtEstabelecimento"
@@ -72,7 +74,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnProximo"
         app:layout_constraintTop_toBottomOf="@+id/btnProximo"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:textColor="@color/design_default_color_on_primary"
+        android:background="@drawable/btn_rounded"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

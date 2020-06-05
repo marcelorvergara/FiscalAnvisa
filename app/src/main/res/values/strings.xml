@@ -8,11 +8,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="insira_seu_email">Insira seu email</string>
-    <string name="crie_um_password">Crie um password</string>
+    <string name="crie_um_password">Crie uma senha</string>
     <string name="cadastrar">Cadastrar</string>
     <string name="cadastro_de_usu_rio">Cadastro de Usuário</string>
-    <string name="confirme_o_passowrd">Confirme o passowrd</string>
-    <string name="password">password</string>
+    <string name="confirme_o_passowrd">Confirme a senha</string>
+    <string name="password">Senha</string>
     <string name="login">Login</string>
     <string name="programa_fiscaliza_padr_o">Programa Fiscaliza Padrão</string>
     <string name="divis_o_de_alimentos">Divisão de Alimentos</string>

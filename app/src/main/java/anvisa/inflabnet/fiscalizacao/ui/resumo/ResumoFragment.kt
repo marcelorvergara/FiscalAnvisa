@@ -63,7 +63,7 @@ class ResumoFragment : Fragment() {
         }
 
         //gerando uma lista sem duplicatas
-        var listUniqueBairros: List<String> = listOf()
+        val listUniqueBairros: List<String>
         listUniqueBairros = listaDeBairros.distinct()
 
         //Autocomplete
@@ -156,12 +156,12 @@ class ResumoFragment : Fragment() {
             resp5Result = totR5/totBairros * 100
             resp6Result = totR6/totBairros * 100
 
-            val txtResposta1Str = "$resp1Result% dos estabelecimentos em $selectedBairro"
-            val txtResposta2Str = "$resp2Result% dos estabelecimentos em $selectedBairro"
-            val txtResposta3Str = "$resp3Result% dos estabelecimentos em $selectedBairro"
-            val txtResposta4Str = "$resp4Result% dos estabelecimentos em $selectedBairro"
-            val txtResposta5Str = "$resp5Result% dos estabelecimentos em $selectedBairro"
-            val txtResposta6Str = "$resp6Result% dos estabelecimentos em $selectedBairro"
+            val txtResposta1Str = "$resp1Result% ok em $selectedBairro"
+            val txtResposta2Str = "$resp2Result% ok em $selectedBairro"
+            val txtResposta3Str = "$resp3Result% ok em $selectedBairro"
+            val txtResposta4Str = "$resp4Result% ok em $selectedBairro"
+            val txtResposta5Str = "$resp5Result% ok em $selectedBairro"
+            val txtResposta6Str = "$resp6Result% ok em $selectedBairro"
 
             mAlertDialog.txtResposta1.text = txtResposta1Str
             mAlertDialog.txtResposta2.text = txtResposta2Str

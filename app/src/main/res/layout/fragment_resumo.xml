@@ -52,7 +52,9 @@
         android:layout_marginBottom="90dp"
         android:text="@string/logout"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/acListBairros" />
+        app:layout_constraintEnd_toEndOf="@+id/acListBairros"
+        android:textColor="@color/design_default_color_on_primary"
+        android:background="@drawable/btn_rounded"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
