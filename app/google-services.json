@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "59529093916",
+    "firebase_url": "https://fiscalanvisa.firebaseio.com",
+    "project_id": "fiscalanvisa",
+    "storage_bucket": "fiscalanvisa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:59529093916:android:6019a5ff6375e6418990d9",
+        "android_client_info": {
+          "package_name": "anvisa.inflabnet.fiscalizacao"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "59529093916-54mqovsh9gpcrjqp32o50jofqkfl3461.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK6Tdhz_2QNaYi0CNF6h1ofUYcwTJqbz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "59529093916-54mqovsh9gpcrjqp32o50jofqkfl3461.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

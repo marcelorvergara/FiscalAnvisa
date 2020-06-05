@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_cadastro">
+
+    <fragment
+        android:id="@+id/navigation_cadastro"
+        android:name="anvisa.inflabnet.fiscalizacao.ui.cadastro.CadastroFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_cadastro" >
+        <action
+            android:id="@+id/action_navigation_cadastro_to_perguntasFragment"
+            app:destination="@id/perguntasFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_consulta"
+        android:name="anvisa.inflabnet.fiscalizacao.ui.consulta.ConsultaFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_consulta" />
+
+    <fragment
+        android:id="@+id/navigation_resumo"
+        android:name="anvisa.inflabnet.fiscalizacao.ui.resumo.ResumoFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_resumo" />
+    <fragment
+        android:id="@+id/perguntasFragment"
+        android:name="anvisa.inflabnet.fiscalizacao.ui.cadastro.PerguntasFragment"
+        android:label="Perguntas"
+        tools:layout="@layout/fragment_perguntas" >
+        <action
+            android:id="@+id/action_perguntasFragment_to_navigation_cadastro"
+            app:destination="@id/navigation_cadastro"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+</navigation>
