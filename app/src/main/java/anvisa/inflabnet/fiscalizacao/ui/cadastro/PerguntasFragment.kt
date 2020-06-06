@@ -1,5 +1,6 @@
 package anvisa.inflabnet.fiscalizacao.ui.cadastro
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.AsyncTask
@@ -62,17 +63,17 @@ class PerguntasFragment : Fragment() {
 
         btnGravar.setOnClickListener {
 
-            var resiltado1: Boolean = false
-            var resiltado2: Boolean = false
-            var resiltado3: Boolean = false
-            var resiltado4: Boolean = false
-            var resiltado5: Boolean = false
-            var resiltado6: Boolean = false
+            var resiltado1 = false
+            var resiltado2 = false
+            var resiltado3 = false
+            var resiltado4 = false
+            var resiltado5 = false
+            var resiltado6 = false
 
             //pergunta 1
             val checked1 = rgPergunta1.checkedRadioButtonId
             if (checked1 != -1) {
-                val result = resources.getResourceEntryName(checked1);
+                val result = resources.getResourceEntryName(checked1)
                 when(result){
                     "radioButton1" -> {
                         resiltado1 = true
@@ -86,7 +87,7 @@ class PerguntasFragment : Fragment() {
             //pergunta 2
             val checked2 = rgPergunta2.checkedRadioButtonId
             if (checked2 != -1) {
-                val result = resources.getResourceEntryName(checked2);
+                val result = resources.getResourceEntryName(checked2)
                 when(result){
                     "radioButton3" -> {
                         resiltado2 = true
@@ -100,7 +101,7 @@ class PerguntasFragment : Fragment() {
             //pergunta 3
             val checked3 = rgPergunta3.checkedRadioButtonId
             if (checked3 != -1) {
-                val result = resources.getResourceEntryName(checked3);
+                val result = resources.getResourceEntryName(checked3)
                 when(result){
                     "radioButton5" -> {
                         resiltado3 = true
@@ -114,7 +115,7 @@ class PerguntasFragment : Fragment() {
             //pergunta 4
             val checked4 = rgPergunta4.checkedRadioButtonId
             if (checked4 != -1) {
-                val result = resources.getResourceEntryName(checked4);
+                val result = resources.getResourceEntryName(checked4)
                 when(result){
                     "radioButton7" -> {
                         resiltado4 = true
@@ -128,7 +129,7 @@ class PerguntasFragment : Fragment() {
             //pergunta 5
             val checked5 = rgPergunta5.checkedRadioButtonId
             if (checked5 != -1) {
-                val result = resources.getResourceEntryName(checked5);
+                val result = resources.getResourceEntryName(checked5)
                 when(result){
                     "radioButton9" -> {
                         resiltado5 = true
@@ -142,7 +143,7 @@ class PerguntasFragment : Fragment() {
             //pergunta 6
             val checked6 = rgPergunta6.checkedRadioButtonId
             if (checked6 != -1) {
-                val result = resources.getResourceEntryName(checked6);
+                val result = resources.getResourceEntryName(checked6)
                 when(result){
                     "radioButton11" -> {
                         resiltado6 = true
@@ -160,8 +161,10 @@ class PerguntasFragment : Fragment() {
                 //vamos de shared preferences
                 val sharedPrefs: SharedPreferences = requireContext().getSharedPreferences("Armazenamento_Temporario", Context.MODE_PRIVATE)
                 val municipioShP = sharedPrefs.getString("municipio","Município")
-                val bairroShP = sharedPrefs.getString("bairro","Bairro")
+                val bairroShPSpaces = sharedPrefs.getString("bairro","Bairro")
                 val estabelecimentoShP = sharedPrefs.getString("estabelecimento","Estabelecimento")
+                //removendo os espaços no final do bairro que vem do JSON
+                val bairroShP = bairroShPSpaces?.trimEnd()
 
                 //ID do avaliador
                 val idFiscalLogado = GetIdAvaliador().execute(101).get()
@@ -171,8 +174,6 @@ class PerguntasFragment : Fragment() {
                 estabelecimentoCripto.setClearText(estabelecimentoShP)
                 val bairroCripto = CriptoString()
                 bairroCripto.setClearText(bairroShP)
-
-                Log.i("CriptoTest cad",bairroCripto.toString())
 
                 //montar o objeto a ser guardado no banco
                 val avaliacaoObj = Avaliacoes(
@@ -192,20 +193,18 @@ class PerguntasFragment : Fragment() {
                 GuardarAvaliacao().execute(avaliacaoObj)
 
                 //apagar Shared Preference
-                var clearSp = sharedPrefs.edit()
+                val clearSp = sharedPrefs.edit()
                 clearSp.clear()
-                clearSp.commit()
+                clearSp.apply()
 
                 //voltar para tela inicial
                 findNavController().navigate(R.id.action_perguntasFragment_to_navigation_cadastro)
-
-//                Toast.makeText(requireContext(),"estab: ${estabelecimentoShP}",Toast.LENGTH_SHORT).show()
-//                Toast.makeText(requireContext(),"estab cripto: ${estabelecimentoCripto.toString()}",Toast.LENGTH_SHORT).show()
 
             }
         }
     }
 
+    @SuppressLint("StaticFieldLeak")
     inner class GuardarAvaliacao: AsyncTask<Avaliacoes,Unit,Unit>() {
         override fun doInBackground(vararg params: Avaliacoes?) {
             appDatabase.avaliacoesDAO().guardaAvaliacao(params[0]!!)
@@ -216,6 +215,7 @@ class PerguntasFragment : Fragment() {
         }
     }
 
+    @SuppressLint("StaticFieldLeak")
     inner class GetIdAvaliador: AsyncTask<Int,Unit,String>() {
         override fun doInBackground(vararg params: Int?): String {
             val idFiscal = appDatabase.fiscalDAO().getIdAvaliadorAtual(params[0]!!)

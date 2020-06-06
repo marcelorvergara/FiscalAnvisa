@@ -47,4 +47,6 @@
     <string name="lista_de_bairros">Lista de Bairros</string>
     <string name="total_de_avalia_es">Total de Avaliações:</string>
     <string name="result_tot">Result Tot</string>
+    <string name="desejo_de_consulta_estabelecimento">Selecione o estabelecimento que deseja consultar:</string>
+    <string name="consulta_estabelecimentos">Consulta Estabelecimentos</string>
 </resources>

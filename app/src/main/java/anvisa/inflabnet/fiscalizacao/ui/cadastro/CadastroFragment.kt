@@ -98,7 +98,7 @@ class CadastroFragment : Fragment() {
 
         btnProximo.setOnClickListener {
             val imm = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.hideSoftInputFromWindow(requireView().getWindowToken(), 0)
+            imm.hideSoftInputFromWindow(btnProximo.windowToken, 0)
 
             if(acMunicipios.text.toString().isBlank() || acBairros.text.toString().isBlank() || edtEstabelecimento.text.toString().isBlank()){
                 showSnackbar("Favro preencher todos os campos!")
@@ -170,14 +170,12 @@ class CadastroFragment : Fragment() {
                 acBairros.threshold = 1
                 acBairros.text.toString()
 
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-                    acBairros.setOnDismissListener {
-                    }
-                    acBairros.onFocusChangeListener = View.OnFocusChangeListener { _, b ->
-                        if (b) {
-                            // Sugestões dropdown
-                            acBairros.showDropDown()
-                        }
+                acBairros.setOnDismissListener {
+                }
+                acBairros.onFocusChangeListener = View.OnFocusChangeListener { _, b ->
+                    if (b) {
+                        // Sugestões dropdown
+                        acBairros.showDropDown()
                     }
                 }
             }
@@ -213,14 +211,12 @@ class CadastroFragment : Fragment() {
                     acMunicipios.threshold = 1
                     acMunicipios.text.toString()
 
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-                        acMunicipios.setOnDismissListener {
-                        }
-                        acMunicipios.onFocusChangeListener = View.OnFocusChangeListener { _, b ->
-                            if (b) {
-                                // Sugestões dropdown
-                                acMunicipios.showDropDown()
-                            }
+                    acMunicipios.setOnDismissListener {
+                    }
+                    acMunicipios.onFocusChangeListener = View.OnFocusChangeListener { _, b ->
+                        if (b) {
+                            // Sugestões dropdown
+                            acMunicipios.showDropDown()
                         }
                     }
 

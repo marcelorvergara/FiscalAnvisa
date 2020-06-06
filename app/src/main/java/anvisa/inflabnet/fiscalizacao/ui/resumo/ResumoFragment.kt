@@ -49,6 +49,7 @@ class ResumoFragment : Fragment() {
         return root
     }
 
+    @SuppressLint("InflateParams")
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -77,25 +78,23 @@ class ResumoFragment : Fragment() {
         acListBairros.threshold = 1
         acListBairros.text.toString()
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            acListBairros.setOnDismissListener {
-            }
-            acListBairros.onFocusChangeListener = View.OnFocusChangeListener { view, b ->
-                if (b) {
-                    // Sugestões dropdown
-                    acListBairros.showDropDown()
-                }
+        acListBairros.setOnDismissListener {
+        }
+        acListBairros.onFocusChangeListener = View.OnFocusChangeListener { _, b ->
+            if (b) {
+                // Sugestões dropdown
+                acListBairros.showDropDown()
             }
         }
 
 
         //evento autocomplete
-        acListBairros.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+        acListBairros.onItemClickListener = AdapterView.OnItemClickListener { parent, _, position, _ ->
             val selectedBairro = parent.getItemAtPosition(position) as String
 
             //escondendo o teclado
             val imm = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.hideSoftInputFromWindow(view.applicationWindowToken, 0)
+            imm.hideSoftInputFromWindow(acListBairros.applicationWindowToken, 0)
 
             //preencher os dados - selectedBairro
             val mDialogView = LayoutInflater.from(context?.applicationContext).inflate(R.layout.frame_resumo, null)
@@ -105,7 +104,7 @@ class ResumoFragment : Fragment() {
             val mAlertDialog = mBuilder.show()
             mAlertDialog.txtBairroresult.text = selectedBairro
             //contando quantas avaliações de um bairro
-            var totBairros: Int = 0
+            var totBairros = 0
             listaDeBairros.forEach {
                 if(selectedBairro.equals(it)){
                     totBairros += 1
@@ -113,18 +112,18 @@ class ResumoFragment : Fragment() {
             }
             mAlertDialog.txtResultTotAvaliacoes.text = totBairros.toString()
             //contagem das respostas começa aqui usando bairrosLista
-            var totR1: Double = 0.0
-            var totR2: Double = 0.0
-            var totR3: Double = 0.0
-            var totR4: Double = 0.0
-            var totR5: Double = 0.0
-            var totR6: Double = 0.0
-            var resp1Result: Double = 0.0
-            var resp2Result: Double = 0.0
-            var resp3Result: Double = 0.0
-            var resp4Result: Double = 0.0
-            var resp5Result: Double = 0.0
-            var resp6Result: Double = 0.0
+            var totR1= 0.0
+            var totR2= 0.0
+            var totR3= 0.0
+            var totR4= 0.0
+            var totR5= 0.0
+            var totR6= 0.0
+            val resp1Result: Double
+            val resp2Result: Double
+            val resp3Result: Double
+            val resp4Result: Double
+            val resp5Result: Double
+            val resp6Result: Double
             bairrosLista.forEach {
                 if (it.bairro_estab?.getClearText().equals(selectedBairro)){
 
@@ -188,7 +187,7 @@ class ResumoFragment : Fragment() {
     @SuppressLint("StaticFieldLeak")
     inner class GetAllBairros:AsyncTask<Unit,Unit,List<Avaliacoes>>(){
         override fun doInBackground(vararg params: Unit?): List<Avaliacoes> {
-            var listBairrosAll = appDatabase.avaliacoesDAO().getAllBairros()
+            val listBairrosAll = appDatabase.avaliacoesDAO().getAllBairros()
             return listBairrosAll
         }
 

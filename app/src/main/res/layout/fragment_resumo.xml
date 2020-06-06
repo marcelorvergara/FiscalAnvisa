@@ -13,7 +13,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="2dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/resumo_estabelecimentos"
@@ -26,7 +25,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/selecione_o_bairro_que_deseja_extrair_um_resumo_geral"
@@ -54,7 +52,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/acListBairros"
         android:textColor="@color/design_default_color_on_primary"
-        android:background="@drawable/btn_rounded"/>
+        android:background="@drawable/btn_rounded"
+        android:elevation="8dp"
+        android:translationZ="4dp"
+        android:stateListAnimator="@null"
+        tools:targetApi="lollipop"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

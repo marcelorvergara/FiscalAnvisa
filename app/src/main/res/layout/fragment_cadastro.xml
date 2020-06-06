@@ -13,7 +13,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="2dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/cadastro_novo_estabelecimento"
@@ -50,7 +49,11 @@
         app:layout_constraintEnd_toEndOf="@+id/edtEstabelecimento"
         app:layout_constraintTop_toBottomOf="@+id/edtEstabelecimento"
         android:textColor="@color/design_default_color_on_primary"
-        android:background="@drawable/btn_rounded"/>
+        android:background="@drawable/btn_rounded"
+        android:elevation="8dp"
+        android:translationZ="4dp"
+        android:stateListAnimator="@null"
+        tools:targetApi="lollipop"/>
 
     <EditText
         android:id="@+id/edtEstabelecimento"
@@ -76,7 +79,11 @@
         app:layout_constraintTop_toBottomOf="@+id/btnProximo"
         app:layout_constraintVertical_bias="0.0"
         android:textColor="@color/design_default_color_on_primary"
-        android:background="@drawable/btn_rounded"/>
+        android:background="@drawable/btn_rounded"
+        android:elevation="8dp"
+        android:translationZ="4dp"
+        android:stateListAnimator="@null"
+        tools:targetApi="lollipop"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

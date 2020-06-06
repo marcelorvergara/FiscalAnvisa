@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.biometric.BiometricPrompt
+import androidx.core.content.ContextCompat
 import anvisa.inflabnet.fiscalizacao.R
 import anvisa.inflabnet.fiscalizacao.database.model.Fiscal
 import anvisa.inflabnet.fiscalizacao.database.service.AppDatabase
@@ -16,8 +18,13 @@ import anvisa.inflabnet.fiscalizacao.database.service.AppDatabaseService
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.concurrent.Executor
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var executor: Executor
+    private lateinit var biometricPrompt: BiometricPrompt
+    private lateinit var promptInfo: BiometricPrompt.PromptInfo
 
     private var mAuth: FirebaseAuth? = null
     private lateinit var appDatabase : AppDatabase
@@ -43,8 +50,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
-
     }
+
     @SuppressLint("StaticFieldLeak")
     inner class InsertFiscal() : AsyncTask<Fiscal,Unit,Unit>() {
         override fun doInBackground(vararg params: Fiscal?) {
