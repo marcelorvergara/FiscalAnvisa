@@ -82,8 +82,6 @@ class ResumoFragment : Fragment() {
         }
     }
 
-
-
     @SuppressLint("StaticFieldLeak")
     inner class GetAllBairros:AsyncTask<Unit,Unit,List<Avaliacoes>>(){
         override fun doInBackground(vararg params: Unit?): List<Avaliacoes> {
