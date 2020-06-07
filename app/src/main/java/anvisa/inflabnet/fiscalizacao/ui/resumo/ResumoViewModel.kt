@@ -3,30 +3,52 @@ package anvisa.inflabnet.fiscalizacao.ui.resumo
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
-import android.view.inputmethod.InputMethodManager
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.ViewModel
 import anvisa.inflabnet.fiscalizacao.R
-import anvisa.inflabnet.fiscalizacao.api.bairros.ApiClientBairros
-import anvisa.inflabnet.fiscalizacao.api.bairros.Bairros
 import anvisa.inflabnet.fiscalizacao.database.model.Avaliacoes
-import kotlinx.android.synthetic.main.fragment_cadastro.*
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.frame_resumo.*
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class ResumoViewModel : ViewModel() {
+
+    private var mAuth: FirebaseAuth? = null
+
+    fun acListBairros(
+        listUniqueBairros: List<String>,
+        acListBairros: AutoCompleteTextView,
+        requireContext: Context
+    ) {
+        val adapter = ArrayAdapter(
+            requireContext,
+            android.R.layout.simple_spinner_dropdown_item,
+            listUniqueBairros
+        )
+
+        acListBairros.setAdapter(adapter)
+        acListBairros.threshold = 1
+        acListBairros.text.toString()
+
+        acListBairros.setOnDismissListener {
+        }
+        acListBairros.onFocusChangeListener = View.OnFocusChangeListener { _, b ->
+            if (b) {
+                // Sugestões dropdown
+                acListBairros.showDropDown()
+            }
+        }
+    }
 
      fun autocompListaBairros(
          listaDeBairros: MutableList<String>,
          bairrosLista: List<Avaliacoes>,
          acListBairros: AutoCompleteTextView,
-         requireContext: Context
+         requireContext: Context,
+         resumoLayout: ConstraintLayout
      ) {
         acListBairros.onItemClickListener =
             AdapterView.OnItemClickListener { parent, _, position, _ ->
@@ -39,7 +61,7 @@ class ResumoViewModel : ViewModel() {
 
                 //preencher os dados - selectedBairro
                 val mDialogView = LayoutInflater.from(requireContext)
-                    .inflate(R.layout.frame_resumo, null)
+                    .inflate(R.layout.frame_resumo, resumoLayout,false)
                 val mBuilder = AlertDialog.Builder(requireContext)
                     .setView(mDialogView)
                 //.setTitle("Bairro: ${selectedBairro}")

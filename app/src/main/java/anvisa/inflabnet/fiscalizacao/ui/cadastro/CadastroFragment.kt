@@ -38,10 +38,6 @@ class CadastroFragment : Fragment() {
         cadastroViewModel =
             ViewModelProviders.of(requireActivity()).get(CadastroViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_cadastro, container, false)
-//        val textView: TextView = root.findViewById(R.id.text_home)
-//        cadastroViewModel.text.observe(viewLifecycleOwner, Observer {
-//            textView.text = it
-//        })
 
         val contextFrag = requireActivity().applicationContext
         appDatabase = AppDatabaseService.getInstance(contextFrag)

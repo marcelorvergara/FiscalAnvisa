@@ -8,7 +8,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
@@ -60,38 +59,30 @@ class ResumoFragment : Fragment() {
         listUniqueBairros = listaDeBairros.distinct()
 
         //Autocomplete
-        val adapter = ArrayAdapter(
-            requireContext(),
-            android.R.layout.simple_spinner_dropdown_item,
-            listUniqueBairros
-        )
-
-        acListBairros.setAdapter(adapter)
-        acListBairros.threshold = 1
-        acListBairros.text.toString()
-
-        acListBairros.setOnDismissListener {
-        }
-        acListBairros.onFocusChangeListener = View.OnFocusChangeListener { _, b ->
-            if (b) {
-                // Sugestões dropdown
-                acListBairros.showDropDown()
-            }
-        }
-
+        resumoViewModel.acListBairros(listUniqueBairros,acListBairros,requireContext())
 
         //evento autocomplete
-        resumoViewModel.autocompListaBairros(listaDeBairros, bairrosLista,acListBairros,requireContext())
+        resumoViewModel.autocompListaBairros(
+            listaDeBairros,
+            bairrosLista,
+            acListBairros,
+            requireContext(),
+            resumoLayout
+        )
 
+        //logout
         logoutBtnResumo.setOnClickListener {
             mAuth = FirebaseAuth.getInstance()
             mAuth!!.signOut()
             startActivity(
                 Intent(requireContext(),
-                    MainActivity::class.java)
+                    MainActivity::class.java
+                )
             )
         }
     }
+
+
 
     @SuppressLint("StaticFieldLeak")
     inner class GetAllBairros:AsyncTask<Unit,Unit,List<Avaliacoes>>(){

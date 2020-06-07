@@ -24,7 +24,6 @@ class CadastroActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         cadastroBtnCad.setOnClickListener { criarUser() }
 
-        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
     }
 
     private fun criarUser() {

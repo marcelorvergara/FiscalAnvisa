@@ -49,7 +49,6 @@ class MainActivity : AppCompatActivity() {
             validaLogin()
         }
 
-        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
     }
 
     @SuppressLint("StaticFieldLeak")
@@ -90,9 +89,8 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
                 .addOnFailureListener {
-                    val inputMethodManager =
-                        getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                    inputMethodManager.hideSoftInputFromWindow(loginBtn.windowToken, 0)
+                    val inputMethManag = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                    inputMethManag.hideSoftInputFromWindow(loginBtn.windowToken, 0)
                     showSnackbar(it.message)
                 }
         }else{
