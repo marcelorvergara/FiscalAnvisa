@@ -5,7 +5,7 @@ import androidx.room.Room
 
 class AppDatabaseService {
     companion object{
-        var instance : AppDatabase? = null
+        private var instance : AppDatabase? = null
         private const val database_name = "appDatabase.sql"
         fun getInstance(context: Context): AppDatabase {
             if(instance ==null){

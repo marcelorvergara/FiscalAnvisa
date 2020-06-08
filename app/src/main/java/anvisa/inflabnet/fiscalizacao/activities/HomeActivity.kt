@@ -1,8 +1,6 @@
 package anvisa.inflabnet.fiscalizacao.activities
 
-import android.content.pm.ActivityInfo
 import android.os.Bundle
-import android.widget.Toolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController

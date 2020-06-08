@@ -17,5 +17,4 @@ class Avaliacoes (
     @ColumnInfo(name = "rb4") var rb4: Boolean,
     @ColumnInfo(name = "rb5") var rb5: Boolean,
     @ColumnInfo(name = "rb6") var rb6: Boolean,
-    @PrimaryKey(autoGenerate = true) val avalId: Int = 0
-)
+    @PrimaryKey(autoGenerate = true) val avalId: Int = 0)

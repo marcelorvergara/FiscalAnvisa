@@ -6,12 +6,10 @@ import android.content.SharedPreferences
 import android.os.AsyncTask
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -55,11 +53,8 @@ class PerguntasFragment : Fragment() {
             appViewModel = ViewModelProviders.of(it)[AppViewModel::class.java]
         }
 
-        appViewModel?.estabelecimento?.observe(viewLifecycleOwner, object : Observer<Any>{
-            override fun onChanged(t: Any?) {
-                txtBairro.text = t.toString()
-            }
-        })
+        appViewModel?.estabelecimento?.observe(viewLifecycleOwner,
+            Observer { t -> txtBairro.text = t.toString() })
 
         btnGravar.setOnClickListener {
 
@@ -73,8 +68,7 @@ class PerguntasFragment : Fragment() {
             //pergunta 1
             val checked1 = rgPergunta1.checkedRadioButtonId
             if (checked1 != -1) {
-                val result = resources.getResourceEntryName(checked1)
-                when(result){
+                when(resources.getResourceEntryName(checked1)){
                     "radioButton1" -> {
                         resiltado1 = true
                     }
@@ -87,8 +81,7 @@ class PerguntasFragment : Fragment() {
             //pergunta 2
             val checked2 = rgPergunta2.checkedRadioButtonId
             if (checked2 != -1) {
-                val result = resources.getResourceEntryName(checked2)
-                when(result){
+                when(resources.getResourceEntryName(checked2)){
                     "radioButton3" -> {
                         resiltado2 = true
                     }
@@ -101,8 +94,7 @@ class PerguntasFragment : Fragment() {
             //pergunta 3
             val checked3 = rgPergunta3.checkedRadioButtonId
             if (checked3 != -1) {
-                val result = resources.getResourceEntryName(checked3)
-                when(result){
+                when(resources.getResourceEntryName(checked3)){
                     "radioButton5" -> {
                         resiltado3 = true
                     }
@@ -115,8 +107,7 @@ class PerguntasFragment : Fragment() {
             //pergunta 4
             val checked4 = rgPergunta4.checkedRadioButtonId
             if (checked4 != -1) {
-                val result = resources.getResourceEntryName(checked4)
-                when(result){
+                when(resources.getResourceEntryName(checked4)){
                     "radioButton7" -> {
                         resiltado4 = true
                     }
@@ -129,8 +120,7 @@ class PerguntasFragment : Fragment() {
             //pergunta 5
             val checked5 = rgPergunta5.checkedRadioButtonId
             if (checked5 != -1) {
-                val result = resources.getResourceEntryName(checked5)
-                when(result){
+                when(resources.getResourceEntryName(checked5)){
                     "radioButton9" -> {
                         resiltado5 = true
                     }
@@ -143,8 +133,7 @@ class PerguntasFragment : Fragment() {
             //pergunta 6
             val checked6 = rgPergunta6.checkedRadioButtonId
             if (checked6 != -1) {
-                val result = resources.getResourceEntryName(checked6)
-                when(result){
+                when(resources.getResourceEntryName(checked6)){
                     "radioButton11" -> {
                         resiltado6 = true
                     }
@@ -218,8 +207,7 @@ class PerguntasFragment : Fragment() {
     @SuppressLint("StaticFieldLeak")
     inner class GetIdAvaliador: AsyncTask<Int,Unit,String>() {
         override fun doInBackground(vararg params: Int?): String {
-            val idFiscal = appDatabase.fiscalDAO().getIdAvaliadorAtual(params[0]!!)
-            return idFiscal
+            return appDatabase.fiscalDAO().getIdAvaliadorAtual(params[0]!!)
         }
     }
 

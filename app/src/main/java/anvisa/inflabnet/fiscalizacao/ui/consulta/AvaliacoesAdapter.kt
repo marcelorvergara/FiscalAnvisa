@@ -10,14 +10,14 @@ import anvisa.inflabnet.fiscalizacao.R
 import anvisa.inflabnet.fiscalizacao.database.model.Avaliacoes
 import kotlinx.android.synthetic.main.avaliacao_item.view.*
 
-class AvaliacoesAdapter(val avaliacoes: List<Avaliacoes>, private val itemClick: (Avaliacoes) -> Unit)
+class AvaliacoesAdapter(private val avaliacoes: List<Avaliacoes>, private val itemClick: (Avaliacoes) -> Unit)
     : RecyclerView.Adapter<AvaliacoesAdapter.ViewHolder>(){
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): AvaliacoesAdapter.ViewHolder {
+    ): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.avaliacao_item,parent,false)
-        return AvaliacoesAdapter.ViewHolder(
+        return ViewHolder(
             view,
             itemClick
         )
@@ -28,7 +28,7 @@ class AvaliacoesAdapter(val avaliacoes: List<Avaliacoes>, private val itemClick:
     }
 
     @RequiresApi(Build.VERSION_CODES.M)
-    override fun onBindViewHolder(holder: AvaliacoesAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindForecast(avaliacoes[position])
     }
 

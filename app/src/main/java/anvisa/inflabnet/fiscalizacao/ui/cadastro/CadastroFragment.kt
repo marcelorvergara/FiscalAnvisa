@@ -1,22 +1,18 @@
 package anvisa.inflabnet.fiscalizacao.ui.cadastro
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.os.AsyncTask
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import anvisa.inflabnet.fiscalizacao.R
 import anvisa.inflabnet.fiscalizacao.activities.MainActivity
-import anvisa.inflabnet.fiscalizacao.database.model.Fiscal
 import anvisa.inflabnet.fiscalizacao.database.service.AppDatabase
 import anvisa.inflabnet.fiscalizacao.database.service.AppDatabaseService
 import com.google.android.material.snackbar.Snackbar
@@ -104,6 +100,7 @@ class CadastroFragment : Fragment() {
             }
         }
 
+        //botão voltar
         logoutBtn.setOnClickListener {
             mAuth = FirebaseAuth.getInstance()
             mAuth!!.signOut()
@@ -113,23 +110,6 @@ class CadastroFragment : Fragment() {
             )
         }
     }
-
-    //só para verificar os Ids dos fiscais
-    @SuppressLint("StaticFieldLeak")
-    inner class ShowId: AsyncTask<Unit,Unit,Array<Fiscal>>(){
-        override fun doInBackground(vararg params: Unit?): Array<Fiscal>? {
-            val id = appDatabase.fiscalDAO().show()
-            return id
-        }
-
-        override fun onPostExecute(result: Array<Fiscal>?) {
-                Toast.makeText(requireContext(),"O id atual é ${result?.get(0)!!.id_fiscal}",Toast.LENGTH_SHORT).show()
-        }
-    }
-
-
-
-
 
     private fun showSnackbar(msg: String?) {
         val snack = Snackbar.make(novoEstabRoot,msg.toString(), Snackbar.LENGTH_LONG)

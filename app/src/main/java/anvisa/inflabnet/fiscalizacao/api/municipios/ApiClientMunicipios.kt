@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClientMunicipios {
     private var instance : Retrofit? = null
-    private val url : String = "https://servicodados.ibge.gov.br"
+    private const val url : String = "https://servicodados.ibge.gov.br"
     private fun getInstance(): Retrofit {
         if (instance == null){
             instance = Retrofit.Builder()

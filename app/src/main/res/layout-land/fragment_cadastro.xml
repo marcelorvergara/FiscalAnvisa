@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/novoEstabRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ui.cadastro.CadastroFragment">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/cadastro_novo_estabelecimento"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/acMunicipios"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/digite_o_munic_pio_do_estabelecimento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+    <AutoCompleteTextView
+        android:id="@+id/acBairros"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/digite_o_bairro_do_estabelecimento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/acMunicipios" />
+
+    <Button
+        android:id="@+id/btnProximo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/pr_ximo"
+        app:layout_constraintEnd_toEndOf="@+id/edtEstabelecimento"
+        app:layout_constraintTop_toBottomOf="@+id/edtEstabelecimento"
+        android:textColor="@color/design_default_color_on_primary"
+        android:background="@drawable/btn_rounded"
+        android:elevation="8dp"
+        android:translationZ="4dp"
+        android:stateListAnimator="@null"
+        tools:targetApi="lollipop"/>
+
+    <EditText
+        android:id="@+id/edtEstabelecimento"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/nome_do_estabelecimento"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/acBairros"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnProximo"
+        app:layout_constraintTop_toBottomOf="@+id/btnProximo"
+        app:layout_constraintVertical_bias="0.0"
+        android:textColor="@color/design_default_color_on_primary"
+        android:background="@drawable/btn_rounded"
+        android:elevation="8dp"
+        android:translationZ="4dp"
+        android:stateListAnimator="@null"
+        tools:targetApi="lollipop"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

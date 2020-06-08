@@ -13,10 +13,7 @@ import anvisa.inflabnet.fiscalizacao.database.dao.FiscalDAO
 
 //anotação com relação de entidades(tabelas) que compõe a base
 @Database(
-    entities = arrayOf(
-        Fiscal::class,
-        Avaliacoes::class
-    ),
+    entities = [Fiscal::class, Avaliacoes::class],
     //para notificar mudanças da base de dados do dispositivo
     version = 1
 )@TypeConverters(CriptoConverter::class, DateConverter::class)

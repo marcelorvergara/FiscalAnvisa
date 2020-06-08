@@ -36,9 +36,8 @@ class ConsultaFragment : Fragment() {
 
         consultaViewModel =
             ViewModelProviders.of(this).get(ConsultaViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_consulta, container, false)
 
-        return root
+        return inflater.inflate(R.layout.fragment_consulta, container, false)
     }
 
     @RequiresApi(Build.VERSION_CODES.M)
@@ -64,13 +63,10 @@ class ConsultaFragment : Fragment() {
 
     }
 
-
-
     @SuppressLint("StaticFieldLeak")
     inner class GetEstabelecimentos: AsyncTask<String,Unit,List<Avaliacoes>>(){
         override fun doInBackground(vararg params: String?): List<Avaliacoes> {
-            val listaAval = appDatabase.avaliacoesDAO().getAll(params[0]!!)
-            return listaAval
+            return appDatabase.avaliacoesDAO().getAll(params[0]!!)
         }
 
     }
@@ -78,8 +74,7 @@ class ConsultaFragment : Fragment() {
     @SuppressLint("StaticFieldLeak")
     inner class GetIdAvaliador: AsyncTask<Int,Unit,String>() {
         override fun doInBackground(vararg params: Int?): String {
-            val idFiscal = appDatabase.fiscalDAO().getIdAvaliadorAtual(params[0]!!)
-            return idFiscal
+            return appDatabase.fiscalDAO().getIdAvaliadorAtual(params[0]!!)
         }
     }
 }

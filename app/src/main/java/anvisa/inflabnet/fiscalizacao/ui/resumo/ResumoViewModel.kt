@@ -11,12 +11,9 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.ViewModel
 import anvisa.inflabnet.fiscalizacao.R
 import anvisa.inflabnet.fiscalizacao.database.model.Avaliacoes
-import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.frame_resumo.*
 
 class ResumoViewModel : ViewModel() {
-
-    private var mAuth: FirebaseAuth? = null
 
     fun acListBairros(
         listUniqueBairros: List<String>,

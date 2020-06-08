@@ -35,12 +35,12 @@ class ConsultaViewModel : ViewModel() {
                 val mAlertDialog = mBuilder.show()
                 mAlertDialog.txtEstab.text = it.estabelecimento?.getClearText()
                 mAlertDialog.txtBairro.text = it.bairro_estab?.getClearText()
-                mAlertDialog.txtResposta1.text = if (it.rb1 == true) "Sim" else "Não"
-                mAlertDialog.txtResposta2.text = if (it.rb2 == true) "Sim" else "Não"
-                mAlertDialog.txtResposta3.text = if (it.rb3 == true) "Sim" else "Não"
-                mAlertDialog.txtResposta4.text = if (it.rb4 == true) "Sim" else "Não"
-                mAlertDialog.txtResposta5.text = if (it.rb5 == true) "Sim" else "Não"
-                mAlertDialog.txtResposta6.text = if (it.rb6 == true) "Sim" else "Não"
+                mAlertDialog.txtResposta1.text = if (it.rb1) "Sim" else "Não"
+                mAlertDialog.txtResposta2.text = if (it.rb2) "Sim" else "Não"
+                mAlertDialog.txtResposta3.text = if (it.rb3) "Sim" else "Não"
+                mAlertDialog.txtResposta4.text = if (it.rb4) "Sim" else "Não"
+                mAlertDialog.txtResposta5.text = if (it.rb5) "Sim" else "Não"
+                mAlertDialog.txtResposta6.text = if (it.rb6) "Sim" else "Não"
                 mAlertDialog.btnVoltarPerguntasFrame.setOnClickListener {
                     mAlertDialog.dismiss()
                 }

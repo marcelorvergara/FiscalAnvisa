@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object ApiClientBairros {
 
     private var instance : Retrofit? = null
-    private val url : String = "https://pgeo3.rio.rj.gov.br/"
+    private const val url : String = "https://pgeo3.rio.rj.gov.br/"
     private fun getInstance(): Retrofit {
         if (instance == null){
             instance = Retrofit.Builder()

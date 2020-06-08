@@ -1,6 +1,5 @@
 package anvisa.inflabnet.fiscalizacao.ui.cadastro
 
-import android.R
 import android.content.Context
 import android.view.View
 import android.widget.ArrayAdapter
@@ -47,7 +46,7 @@ class CadastroViewModel : ViewModel() {
 
                         val adapter = ArrayAdapter(
                             context,
-                            R.layout.simple_spinner_dropdown_item,
+                            android.R.layout.simple_spinner_dropdown_item,
                             municipios
                         )
 
@@ -92,9 +91,8 @@ class CadastroViewModel : ViewModel() {
 
                 bairrosList.sort()
 
-                val context = requireContext
                 val adapter = ArrayAdapter(
-                    context,
+                    requireContext,
                     android.R.layout.simple_spinner_dropdown_item,
                     bairrosList
                 )
