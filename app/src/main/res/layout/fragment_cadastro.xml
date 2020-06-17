@@ -51,7 +51,7 @@
         android:elevation="8dp"
         android:padding="?android:attr/scrollbarSize"
         android:stateListAnimator="@null"
-        android:text="@string/responder_question_rio"
+        android:text="@string/cadastrar_avalia_o"
         android:textColor="@color/design_default_color_on_primary"
         android:translationZ="4dp"
         app:layout_constraintEnd_toEndOf="@+id/edtEstabelecimento"

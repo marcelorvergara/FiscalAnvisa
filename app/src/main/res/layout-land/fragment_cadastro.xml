@@ -12,7 +12,8 @@
         android:id="@+id/btnAutuacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/btn_rounded"
         android:elevation="8dp"
         android:padding="?android:attr/scrollbarSize"
@@ -20,8 +21,8 @@
         android:text="@string/cadastrar_anota_o"
         android:textColor="@color/design_default_color_on_primary"
         android:translationZ="4dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/acMunicipios"
-        app:layout_constraintStart_toEndOf="@+id/acMunicipios"
+        app:layout_constraintStart_toEndOf="@+id/acBairros"
+        app:layout_constraintTop_toBottomOf="@+id/btnProximo"
         tools:targetApi="lollipop" />
 
     <TextView
@@ -62,16 +63,17 @@
         android:id="@+id/btnProximo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="37dp"
         android:background="@drawable/btn_rounded"
         android:elevation="8dp"
+        android:padding="?android:attr/scrollbarSize"
         android:stateListAnimator="@null"
-        android:text="@string/responder_question_rio"
+        android:text="@string/cadastrar_avalia_o"
         android:textColor="@color/design_default_color_on_primary"
         android:translationZ="4dp"
-        app:layout_constraintStart_toEndOf="@+id/acBairros"
-        app:layout_constraintTop_toBottomOf="@+id/btnAutuacao"
+        app:layout_constraintStart_toEndOf="@+id/acMunicipios"
+        app:layout_constraintTop_toTopOf="parent"
         tools:targetApi="lollipop" />
 
     <EditText
@@ -92,8 +94,8 @@
         android:id="@+id/logoutBtn"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/btn_rounded"
         android:elevation="8dp"
         android:stateListAnimator="@null"
@@ -101,7 +103,7 @@
         android:textColor="@color/design_default_color_on_primary"
         android:translationZ="4dp"
         app:layout_constraintStart_toEndOf="@+id/edtEstabelecimento"
-        app:layout_constraintTop_toBottomOf="@+id/btnProximo"
+        app:layout_constraintTop_toBottomOf="@+id/btnAutuacao"
         tools:targetApi="lollipop" />
 
     <TextView

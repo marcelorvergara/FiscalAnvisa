@@ -109,8 +109,13 @@ class NuvemFragment : Fragment() {
                             val idAnotacao = it.idAnotacao
                             val anotacaoObj =
                                 AnotacaoDecipt(
+                                    idFiscal!!,
                                     titAutuacao!!,
-                                    estabeleAnotacao!!
+                                    dataAutuacao!!,
+                                    notaAnotacao,
+                                    fotoAnotacao!!,
+                                    estabeleAnotacao!!,
+                                    idAnotacao!!
                                 )
                             //subindo para o firebase
                             val idDoc = it.idAnotacao.toString() + "_" + it.idFiscal
@@ -147,8 +152,13 @@ class NuvemFragment : Fragment() {
                             val idAnotacao = it.idAnotacao
                             val anotacaoObj =
                                 AnotacaoDecipt(
+                                    idFiscal!!,
                                     titAutuacao!!,
-                                    estabeleAnotacao!!
+                                    dataAutuacao!!,
+                                    notaAnotacao!!,
+                                    fotoAnotacao!!,
+                                    estabeleAnotacao!!,
+                                    idAnotacao!!
                                 )
                             //subindo para o firebase
                             val idDoc = it.idAnotacao.toString() + "_" + it.idFiscal
