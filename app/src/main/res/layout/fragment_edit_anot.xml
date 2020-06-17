@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editAnotlLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ui.nuvem.anotacoes.EditAnotFragment" >
+
+    <TextView
+        android:id="@+id/txtIdFiscalEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtIdAnotEdit"
+        app:layout_constraintStart_toEndOf="@+id/txtIdAnotEdit" />
+
+    <ImageView
+        android:id="@+id/imgAutuacao"
+        android:layout_width="220dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/foto_autua_o"
+        android:src="@drawable/ic_add_a_photo_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTituloEditAnot" />
+
+    <TextView
+        android:id="@+id/txtIdAnotEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtAnotEditEstabelecimento"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/estabelecimento"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgAutuacao" />
+
+    <EditText
+        android:id="@+id/edtAnotEditData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="@string/data_da_autua_o"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtAnotEditTexto" />
+
+    <EditText
+        android:id="@+id/edtAnotEditTexto"
+        android:layout_width="360dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="@string/autua_o"
+        android:inputType="textMultiLine|textImeMultiLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtAnotEditEstabelecimento" />
+
+    <EditText
+        android:id="@+id/edtTituloEditAnot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/t_tulo_da_autua_o"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/btnAtualizarAnot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/btn_rounded"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        android:text="@string/atualizar"
+        android:textColor="@color/design_default_color_on_primary"
+        android:translationZ="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnVoltarParaListaAnot"
+        tools:targetApi="lollipop" />
+
+    <Button
+        android:id="@+id/btnVoltarParaListaAnot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/btn_rounded"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        android:text="@string/voltar"
+        android:textColor="@color/design_default_color_on_primary"
+        android:translationZ="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAtualizarAnot"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnExcluirAnot"
+        tools:targetApi="lollipop" />
+
+    <Button
+        android:id="@+id/btnExcluirAnot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/btn_rounded"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        android:text="@string/excluir"
+        android:textColor="@color/design_default_color_on_primary"
+        android:translationZ="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnVoltarParaListaAnot"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:targetApi="lollipop" />
+</androidx.constraintlayout.widget.ConstraintLayout>

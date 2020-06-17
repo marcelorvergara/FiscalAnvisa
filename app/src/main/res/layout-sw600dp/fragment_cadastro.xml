@@ -9,6 +9,52 @@
     tools:context=".ui.cadastro.CadastroFragment">
 
     <TextView
+        android:id="@+id/txtLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/latitude"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/txtLongitude"
+        android:layout_width="62dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/longitude"
+        app:layout_constraintStart_toStartOf="@+id/txtLatitude"
+        app:layout_constraintTop_toBottomOf="@+id/txtLatitude" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/localiza_o"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAutuacao" />
+
+    <Button
+        android:id="@+id/btnAutuacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_rounded"
+        android:elevation="8dp"
+        android:padding="?android:attr/scrollbarSize"
+        android:stateListAnimator="@null"
+        android:text="@string/cadastrar_anota_o"
+        android:textColor="@color/design_default_color_on_primary"
+        android:translationZ="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEstabelecimento"
+        tools:targetApi="lollipop" />
+
+    <TextView
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,46 +90,45 @@
         android:id="@+id/btnProximo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/pr_ximo"
-        app:layout_constraintEnd_toEndOf="@+id/edtEstabelecimento"
-        app:layout_constraintTop_toBottomOf="@+id/edtEstabelecimento"
-        android:textColor="@color/design_default_color_on_primary"
         android:background="@drawable/btn_rounded"
         android:elevation="8dp"
-        android:translationZ="4dp"
         android:stateListAnimator="@null"
-        tools:targetApi="lollipop"/>
+        android:text="@string/pr_ximo"
+        android:textColor="@color/design_default_color_on_primary"
+        android:translationZ="4dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnAutuacao"
+        app:layout_constraintEnd_toEndOf="@+id/edtEstabelecimento"
+        tools:targetApi="lollipop" />
 
     <EditText
         android:id="@+id/edtEstabelecimento"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/nome_do_estabelecimento"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/acBairros"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/acBairros" />
 
     <Button
         android:id="@+id/logoutBtn"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
+        android:background="@drawable/btn_rounded"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
         android:text="@string/logout"
+        android:textColor="@color/design_default_color_on_primary"
+        android:translationZ="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnProximo"
         app:layout_constraintTop_toBottomOf="@+id/btnProximo"
         app:layout_constraintVertical_bias="0.0"
-        android:textColor="@color/design_default_color_on_primary"
-        android:background="@drawable/btn_rounded"
-        android:elevation="8dp"
-        android:translationZ="4dp"
-        android:stateListAnimator="@null"
-        tools:targetApi="lollipop"/>
+        tools:targetApi="lollipop" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

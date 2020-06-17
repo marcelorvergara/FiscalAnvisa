@@ -8,6 +8,22 @@
     android:background="@drawable/background"
     tools:context=".ui.cadastro.CadastroFragment">
 
+    <Button
+        android:id="@+id/btnAutuacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/btn_rounded"
+        android:elevation="8dp"
+        android:padding="?android:attr/scrollbarSize"
+        android:stateListAnimator="@null"
+        android:text="@string/cadastrar_anota_o"
+        android:textColor="@color/design_default_color_on_primary"
+        android:translationZ="4dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/acMunicipios"
+        app:layout_constraintStart_toEndOf="@+id/acMunicipios"
+        tools:targetApi="lollipop" />
+
     <TextView
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
@@ -22,21 +38,23 @@
 
     <AutoCompleteTextView
         android:id="@+id/acMunicipios"
-        android:layout_width="350dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:hint="@string/digite_o_munic_pio_do_estabelecimento"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
 
     <AutoCompleteTextView
         android:id="@+id/acBairros"
-        android:layout_width="350dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:hint="@string/digite_o_bairro_do_estabelecimento"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/acMunicipios" />
 
@@ -44,46 +62,77 @@
         android:id="@+id/btnProximo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/pr_ximo"
-        app:layout_constraintEnd_toEndOf="@+id/edtEstabelecimento"
-        app:layout_constraintTop_toBottomOf="@+id/edtEstabelecimento"
-        android:textColor="@color/design_default_color_on_primary"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
         android:background="@drawable/btn_rounded"
         android:elevation="8dp"
-        android:translationZ="4dp"
         android:stateListAnimator="@null"
-        tools:targetApi="lollipop"/>
+        android:text="@string/responder_question_rio"
+        android:textColor="@color/design_default_color_on_primary"
+        android:translationZ="4dp"
+        app:layout_constraintStart_toEndOf="@+id/acBairros"
+        app:layout_constraintTop_toBottomOf="@+id/btnAutuacao"
+        tools:targetApi="lollipop" />
 
     <EditText
         android:id="@+id/edtEstabelecimento"
-        android:layout_width="350dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/nome_do_estabelecimento"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/acBairros"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/acBairros" />
 
     <Button
         android:id="@+id/logoutBtn"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/logout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnProximo"
-        app:layout_constraintTop_toBottomOf="@+id/btnProximo"
-        app:layout_constraintVertical_bias="0.0"
-        android:textColor="@color/design_default_color_on_primary"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/btn_rounded"
         android:elevation="8dp"
-        android:translationZ="4dp"
         android:stateListAnimator="@null"
-        tools:targetApi="lollipop"/>
+        android:text="@string/logout"
+        android:textColor="@color/design_default_color_on_primary"
+        android:translationZ="4dp"
+        app:layout_constraintStart_toEndOf="@+id/edtEstabelecimento"
+        app:layout_constraintTop_toBottomOf="@+id/btnProximo"
+        tools:targetApi="lollipop" />
 
+    <TextView
+        android:id="@+id/txtLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/latitude"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/txtLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/longitude"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLatitude" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/localiza_o"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

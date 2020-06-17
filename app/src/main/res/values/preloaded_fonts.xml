@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/adamina</item>
+        <item>@font/artifika</item>
+        <item>@font/bevan</item>
+        <item>@font/bungee_shade</item>
+        <item>@font/goblin_one</item>
+        <item>@font/kadwa_bold</item>
+        <item>@font/libre_baskerville</item>
+        <item>@font/tenor_sans</item>
+    </array>
+</resources>

@@ -13,10 +13,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="2dp"
-        android:fontFamily="sans-serif-black"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/goblin_one"
         android:text="@string/consulta_estabelecimentos"
-        android:textSize="24sp"
+        android:textColor="@color/browser_actions_text_color"
+        android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,6 +49,24 @@
         app:layout_constraintTop_toBottomOf="@+id/rvAvaliacoes"
         tools:targetApi="lollipop" />
 
+
+    <Button
+        android:id="@+id/btnAutuacoesLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_rounded"
+        android:elevation="8dp"
+        android:padding="6dp"
+        android:stateListAnimator="@null"
+        android:text="@string/listar_autua_es"
+        android:textColor="@color/design_default_color_on_primary"
+        android:translationZ="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvAvaliacoes"
+        tools:targetApi="lollipop" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvAvaliacoes"
         android:layout_width="match_parent"
@@ -55,7 +74,7 @@
         android:layout_marginStart="14dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:elevation="2dp"
+        android:elevation="4dp"
         android:fadeScrollbars="true"
         android:outlineProvider="bounds"
         android:scrollbars="vertical"

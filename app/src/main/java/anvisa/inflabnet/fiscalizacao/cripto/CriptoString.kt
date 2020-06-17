@@ -30,6 +30,4 @@ class CriptoString {
         cripto = criptoGrafador.cipher(value!!)
     }
 
-
-
 }

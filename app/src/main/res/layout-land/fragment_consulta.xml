@@ -8,6 +8,23 @@
     android:background="@drawable/background"
     tools:context=".ui.consulta.ConsultaFragment">
 
+    <Button
+        android:id="@+id/btnAutuacoesLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="85dp"
+        android:background="@drawable/btn_rounded"
+        android:elevation="8dp"
+        android:padding="6dp"
+        android:stateListAnimator="@null"
+        android:text="@string/listar_autua_es"
+        android:textColor="@color/design_default_color_on_primary"
+        android:translationZ="4dp"
+        app:layout_constraintStart_toEndOf="@+id/rvAvaliacoes"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="lollipop" />
+
     <TextView
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
@@ -37,21 +54,22 @@
         android:id="@+id/logoutBtnConsulta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/btn_rounded"
         android:elevation="8dp"
         android:stateListAnimator="@null"
         android:text="@string/logout"
         android:textColor="@color/design_default_color_on_primary"
         android:translationZ="4dp"
-        app:layout_constraintEnd_toEndOf="@+id/rvAvaliacoes"
-        app:layout_constraintTop_toBottomOf="@+id/rvAvaliacoes"
+        app:layout_constraintStart_toEndOf="@+id/rvAvaliacoes"
+        app:layout_constraintTop_toBottomOf="@+id/btnAutuacoesLista"
         tools:targetApi="lollipop" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvAvaliacoes"
-        android:layout_width="match_parent"
-        android:layout_height="310dp"
+        android:layout_width="450dp"
+        android:layout_height="120dp"
         android:layout_marginStart="14dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"

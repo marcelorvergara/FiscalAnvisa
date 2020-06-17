@@ -13,8 +13,8 @@
         android:title="@string/title_dashboard" />
 
     <item
-        android:id="@+id/navigation_resumo"
-        android:icon="@drawable/ic_assignment_turned_in_black_24dp"
+        android:id="@+id/navigation_nuvem"
+        android:icon="@drawable/ic_cloud_done_black_24dp"
         android:title="@string/title_notifications" />
 
 </menu>

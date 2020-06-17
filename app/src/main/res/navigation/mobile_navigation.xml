@@ -13,22 +13,33 @@
         <action
             android:id="@+id/action_navigation_cadastro_to_perguntasFragment"
             app:destination="@id/perguntasFragment" />
+        <action
+            android:id="@+id/action_navigation_cadastro_to_cadAutuacaoFragment"
+            app:destination="@id/cadAutuacaoFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_consulta"
         android:name="anvisa.inflabnet.fiscalizacao.ui.consulta.ConsultaFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_consulta" />
+        tools:layout="@layout/fragment_consulta" >
+        <action
+            android:id="@+id/action_navigation_consulta_to_listaAutuacoesFragment"
+            app:destination="@id/listaAutuacoesFragment" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_resumo"
-        android:name="anvisa.inflabnet.fiscalizacao.ui.resumo.ResumoFragment"
+        android:id="@+id/navigation_nuvem"
+        android:name="anvisa.inflabnet.fiscalizacao.ui.nuvem.NuvemFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_resumo" />
+        tools:layout="@layout/fragment_nuvem" >
+        <action
+            android:id="@+id/action_navigation_nuvem_to_listarNuvemFragment"
+            app:destination="@id/listarNuvemFragment" />
+    </fragment>
     <fragment
         android:id="@+id/perguntasFragment"
-        android:name="anvisa.inflabnet.fiscalizacao.ui.cadastro.PerguntasFragment"
+        android:name="anvisa.inflabnet.fiscalizacao.ui.cadastro.CadAvaliacaoFragment"
         android:label="Perguntas"
         tools:layout="@layout/fragment_perguntas" >
         <action
@@ -38,5 +49,65 @@
             app:exitAnim="@anim/fragment_close_exit"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadAutuacaoFragment"
+        android:name="anvisa.inflabnet.fiscalizacao.ui.cadastro.CadAutuacaoFragment"
+        android:label="Cadastro de Autuação"
+        tools:layout="@layout/fragment_cad_autuacao" >
+        <action
+            android:id="@+id/action_cadAutuacaoFragment_to_navigation_cadastro"
+            app:destination="@id/navigation_cadastro" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaAutuacoesFragment"
+        android:name="anvisa.inflabnet.fiscalizacao.ui.consulta.ListaAutuacoesFragment"
+        android:label="Lista de Autuações"
+        tools:layout="@layout/fragment_lista_autuacoes">
+        <action
+            android:id="@+id/action_listaAutuacoesFragment_to_navigation_consulta"
+            app:destination="@id/navigation_consulta" />
+    </fragment>
+    <fragment
+        android:id="@+id/listarNuvemFragment"
+        android:name="anvisa.inflabnet.fiscalizacao.ui.nuvem.ListarNuvemFragment"
+        android:label="Lista Nuvem"
+        tools:layout="@layout/fragment_listar_nuvem">
+        <action
+            android:id="@+id/action_listarNuvemFragment_to_navigation_nuvem"
+            app:destination="@id/navigation_nuvem" />
+        <action
+            android:id="@+id/action_listarNuvemFragment_to_editAvalFragment"
+            app:destination="@id/editAvalFragment" />
+        <action
+            android:id="@+id/action_listarNuvemFragment_to_editAnotFragment"
+            app:destination="@id/editAnotFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editAvalFragment"
+        android:name="anvisa.inflabnet.fiscalizacao.ui.nuvem.avaliacoes.EditAvalFragment"
+        android:label="Editar Avaliações"
+        tools:layout="@layout/fragment_edit_aval">
+        <action
+            android:id="@+id/action_editAvalFragment_to_navigation_nuvem"
+            app:destination="@id/navigation_nuvem" />
+        <action
+            android:id="@+id/action_editAvalFragment_to_listarNuvemFragment"
+            app:destination="@id/listarNuvemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editAnotFragment"
+        android:name="anvisa.inflabnet.fiscalizacao.ui.nuvem.anotacoes.EditAnotFragment"
+        android:label="Editar Autuações"
+        tools:layout="@layout/fragment_edit_anot">
+        <action
+            android:id="@+id/action_editAnotFragment_to_listarNuvemFragment"
+            app:destination="@id/listarNuvemFragment" />
+        <action
+            android:id="@+id/action_editAnotFragment_to_navigation_nuvem"
+            app:destination="@id/navigation_nuvem" />
+        <action
+            android:id="@+id/action_editAnotFragment_to_listarNuvemFragment2"
+            app:destination="@id/listarNuvemFragment" />
     </fragment>
 </navigation>

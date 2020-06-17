@@ -8,6 +8,23 @@
     android:background="@drawable/background"
     tools:context=".ui.consulta.ConsultaFragment">
 
+    <Button
+        android:id="@+id/btnAutuacoesLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="43dp"
+        android:background="@drawable/btn_rounded"
+        android:elevation="8dp"
+        android:padding="6dp"
+        android:stateListAnimator="@null"
+        android:text="@string/listar_autua_es"
+        android:textColor="@color/design_default_color_on_primary"
+        android:translationZ="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/logoutBtnConsulta"
+        app:layout_constraintTop_toBottomOf="@+id/rvAvaliacoes"
+        tools:targetApi="lollipop" />
+
     <TextView
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"

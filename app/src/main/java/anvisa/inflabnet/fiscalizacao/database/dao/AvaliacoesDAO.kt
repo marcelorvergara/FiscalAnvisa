@@ -1,9 +1,10 @@
 package anvisa.inflabnet.fiscalizacao.database.dao
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import anvisa.inflabnet.fiscalizacao.database.model.Avaliacoes
+import anvisa.inflabnet.fiscalizacao.database.tabelas.Avaliacoes
 
 @Dao
 interface AvaliacoesDAO {
@@ -16,5 +17,11 @@ interface AvaliacoesDAO {
 
     @Query("Select * from Avaliacoes")
     fun getAllBairros() : List<Avaliacoes>
+
+    @Query("Update Avaliacoes set anotacao = :condicao where avalId = :idAval")
+    fun updateAvalAnot(idAval: Int, condicao: Boolean)
+
+    @Delete
+    fun deleteAval(avaliacoes: Avaliacoes)
 
 }

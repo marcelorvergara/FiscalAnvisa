@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Fiscal Anvisa Legal</string>
     <string name="title_activity_home">HomeActivity</string>
-    <string name="title_home">Cadastro</string>
+    <string name="title_home">Cadastro Fiscalização</string>
     <string name="title_dashboard">Consulta</string>
-    <string name="title_notifications">Resumo</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_notifications">Nuvem</string>
+    <string name="facebook_app_id">692461334909208</string>
+    <string name="fb_login_protocol_scheme">fb692461334909208</string>
     <string name="insira_seu_email">Insira seu email</string>
     <string name="crie_um_password">Crie uma senha</string>
     <string name="cadastrar">Cadastrar</string>
@@ -16,15 +16,14 @@
     <string name="programa_fiscaliza_padr_o">Programa Fiscaliza Padrão</string>
     <string name="divis_o_de_alimentos">Divisão de Alimentos</string>
     <string name="app_para_fins_acad_micos">App para fins acadêmicos</string>
-    <string name="estabelecimento">Estabelecimento</string>
+    <string name="estabelecimento">Estabelecimento:</string>
     <string name="bairro">Bairro</string>
-    <string name="cadastro_novo_estabelecimento">Cadastro Novo Estabelecimento</string>
+    <string name="cadastro_novo_estabelecimento">Cadastrar Novo Estabelecimento</string>
     <string name="digite_o_munic_pio_do_estabelecimento">Digite o município do estabelecimento</string>
     <string name="digite_o_bairro_do_estabelecimento">Digite o bairro do estabelecimento</string>
     <string name="pr_ximo">Próximo</string>
     <string name="nome_do_estabelecimento">Nome do Estabelecimento</string>
     <string name="logout">Logout</string>
-    <string name="voltar">Voltar</string>
     <string name="question_rio">Questionário:</string>
     <string name="q1">1 -O estabelecimento possui todos os alvarás para funcionamento?</string>
     <string name="sim">Sim</string>
@@ -41,11 +40,57 @@
     <string name="resposta4">Resposta4</string>
     <string name="resposta5">Resposta5</string>
     <string name="resposta6">Resposta6</string>
-    <string name="resumo_estabelecimentos">Resumo Estabelecimentos</string>
+    <string name="resumo_estabelecimentos">Operações na Nuvem</string>
     <string name="selecione_o_bairro_que_deseja_extrair_um_resumo_geral">Selecione o bairro que deseja extrair um resumo geral:</string>
     <string name="lista_de_bairros">Lista de Bairros</string>
     <string name="total_de_avalia_es">Total de Avaliações:</string>
     <string name="result_tot">Result Tot</string>
     <string name="desejo_de_consulta_estabelecimento">Selecione o estabelecimento que deseja consultar:</string>
-    <string name="consulta_estabelecimentos">Consulta Estabelecimentos</string>
+    <string name="consulta_estabelecimentos">Consulta Avaliações</string>
+    <string name="facebook_login">Facebook Login</string>
+    <string name="t_tulo">Título</string>
+    <string name="data">Data</string>
+    <string name="autua_o">Autuação</string>
+    <string name="clique_para_uma_foto">Clique para uma foto</string>
+    <string name="inserir_autua_o">Inserir Autuação</string>
+    <string name="fiscal">Fiscal:</string>
+    <string name="cadastrar_anota_o">Cadastrar Anotação</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="localiza_o">Localização:</string>
+    <string name="listar_autua_es">Listar Autuações</string>
+    <string name="selecione_a_autua_o_para_consulta">Selecione a autuação para consulta:</string>
+    <string name="data_da_autua_o">Data da Autuação</string>
+    <string name="t_tulo_da_autua_o">Título da Autuação</string>
+    <string name="voltar">voltar</string>
+    <string name="foto_autua_o">Foto Autuação</string>
+    <string name="responder_question_rio">Responder Questionário</string>
+    <string name="textview" />
+    <string name="possui_autuacao">Este estabelecimento possui autuação</string>
+    <string name="nao_possui_autuacao">Não há anotação/autuação para esse estabelecimento</string>
+    <string name="false_str">false</string>
+    <string name="true_str">true</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lista_de">Lista de</string>
+    <string name="editar_avalia_es">Editar Avaliações</string>
+    <string name="armazenamento">Armazenamento</string>
+    <string name="possui_alvar">Possui Alvará</string>
+    <string name="manipula_o_de_alimentos">Manipulação de Alimentos</string>
+    <string name="exposi_o_e_transporte">Exposição e Transporte</string>
+    <string name="banheiros_limpos">Banheiros Limpos</string>
+    <string name="rotulagem_dos_alimentos">Rotulagem dos Alimentos</string>
+    <string name="atualizar">Atualizar</string>
+    <string name="excluir">Excluir</string>
+    <string name="app_version">App. Version.:</string>
+    <string name="possui_anota_o">Possui Anotação</string>
+    <string name="editar_ou_excluir">Editar ou Excluir</string>
+    <string name="estabelecimento_selecionado">Estabelecimento selecionado:</string>
+    <string name="selecione_um_item_abaixo_para_editar_ou_excluir">Selecione um item abaixo para editar ou excluir:</string>
+    <string name="avalia_es">Avaliações</string>
+    <string name="autua_es">Autuações</string>
+    <string name="ambos">Ambos</string>
+    <string name="upload">Upload</string>
+    <string name="listar">Listar</string>
 </resources>

@@ -1,0 +1,19 @@
+
+C:\Program Files\Java\jdk1.7.0_80\bin>keytool -exportcert -alias AndroidDebugKey -keystore C:\Users\Marcelo\.android\debug.keystore | c:\Users\Marcelo\AndroidStudioProjects\openssl\bin\openssl.exe sha1 -binary | c:\Users\Marcelo\AndroidStudioProjects\openssl\bin\openssl.exe base64
+Informe a senha da ßrea de armazenamento de chaves:  android
+
+HEX to Base64
+Janela Gradle -> Task -> signingReport
+http://tomeko.net/online_tools/hex_to_base64.php
+
+
+id
+297755394942937
+secret
+970f5df637b4cbb8923945d8a7586da0
+
+Colocar no facebook
+https://fiscalanvisa.firebaseapp.com/__/auth/handler
+
+Hash do SHA1
+WrfkQqPr9Rm5a5jh6tjurRxELuc=

@@ -1,7 +1,10 @@
 package anvisa.inflabnet.fiscalizacao.database.dao
 
-import androidx.room.*
-import anvisa.inflabnet.fiscalizacao.database.model.Fiscal
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import anvisa.inflabnet.fiscalizacao.database.tabelas.Fiscal
 
 @Dao
 interface FiscalDAO {
